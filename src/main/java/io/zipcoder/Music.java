@@ -8,7 +8,23 @@ public class Music {
         this.playList = playList;
     }
 
-    public Integer selection(Integer startIndex, String selection){
-        return null;
+    public Integer selection(Integer startIndex, String selection) {
+        int forward = 0;
+        int backward = 0;
+        for (int i = startIndex; i < this.playList.length; i++) {
+            if (this.playList[i].equals(selection)) {
+            }
+            forward++;
+        }
+        for (int i = startIndex; i >=0; i--) {
+            if (this.playList[i].equals(selection)) {
+            }
+            backward++;
+        }
+if(forward<backward){
+    return forward;
+}else{
+    return backward;
+}
     }
 }
